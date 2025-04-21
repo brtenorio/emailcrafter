@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    command: ["poetry", "run", "streamlit", "run", "src/app.py", "--server.port", "8080"]
+
