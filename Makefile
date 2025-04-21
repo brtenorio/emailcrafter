@@ -21,7 +21,7 @@ install:
 
 run-app:
 	@echo "Running the application..."
-	$(POETRY) run streamlit run src/app.py --server.port 8080
+	$(POETRY) run streamlit run src/emailcrafter/app.py --server.port 8080
 
 run-api:
 	@echo "Running the API..."

@@ -26,4 +26,4 @@ RUN git pull
 EXPOSE 8080
 
 # Command to run the application
-CMD ["poetry", "run", "streamlit", "run", "src/app.py", "--server.port", "8080"]
+CMD ["poetry", "run", "streamlit", "run", "sr/emailcrafter/app.py", "--server.port", "8080"]
