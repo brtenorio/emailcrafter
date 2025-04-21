@@ -16,8 +16,8 @@ RUN git clone https://github.com/brtenorio/emailcrafter.git
 WORKDIR emailcrafter
 
 # Install the app dependencies 
-RUN pip install -r requirements.txt
 RUN git pull
+RUN pip install -r requirements.txt
 # Fetch large files
 # RUN git lfs fetch --all && git pull && git lfs pull
 
@@ -25,4 +25,4 @@ RUN git pull
 EXPOSE 8080
 
 # Command to run the application
-CMD ["poetry", "run", "streamlit", "run", "src/emailcrafter/app.py", "--server.port", "8080"]
+CMD ["streamlit", "run", "app/app.py", "--server.port", "8080"]

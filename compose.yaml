@@ -7,5 +7,5 @@ services:
       - "8080:8080"
     volumes:
       - .:/app
-    command: ["poetry", "run", "streamlit", "run", "src/emailcrafter/app.py", "--server.port", "8080"]
+    command: ["streamlit", "run", "app/app.py", "--server.port", "8080"]
 
